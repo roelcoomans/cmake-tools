@@ -33,7 +33,7 @@
 # Finally, if OSAL is not found in the system it will be downloaded
 # and built automatically.
 
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.7.2)
 
 if (NOT TARGET osal)
   # Attempt to find externally built OSAL
@@ -44,8 +44,8 @@ if (NOT TARGET osal)
     include(FetchContent)
     FetchContent_Declare(
       osal
-      GIT_REPOSITORY      https://github.com/rtlabs-com/osal.git
-      GIT_TAG             88fe101
+      GIT_REPOSITORY      https://github.com/roelcoomans/osal
+      GIT_TAG             808be99c73420d519d86c67f485c1eca5c1657f8
       )
     FetchContent_GetProperties(osal)
     if(NOT osal_POPULATED)
